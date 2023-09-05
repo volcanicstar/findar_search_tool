@@ -1,5 +1,7 @@
 (function($) {
 	$(document).ready(function(){
+		
+		/*
 		$.getJSON('/wp-content/themes/area-theme-live/assets/vue/js/data/topics.json', function(data) {
             window.topicsData = data;
 		});
@@ -9,8 +11,6 @@
 		$.getJSON('/wp-content/themes/area-theme-live/assets/vue/js/data/category.json', function(data) {
             window.categoryData = data;
 		});
-		
-		/*
 		$.getJSON('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json', function(data) {
             window.mainData = data;
 			setTimeout(function(){
@@ -18,6 +18,16 @@
 			}, 100);
 		});
 		*/
+		
+		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/topics.json').then(response => () => {
+			window.topicsData = response.json();
+		});
+		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/terms.json').then(response => () => {
+			window.termsData = response.json();
+		});
+		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/category.json').then(response => () => {
+			window.category = response.json();
+		});
 		
 		
 		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json').then(response => () => {
