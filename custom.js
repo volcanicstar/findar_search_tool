@@ -10,21 +10,22 @@
             window.categoryData = data;
 		});
 		
-		/*
-		$.get('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json', function(data) {
+		
+		$.getJSON('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json', function(data) {
             window.mainData = data;
 			setTimeout(function(){
 				$('body').append('<script src="/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js"></script>');
 			}, 1000);
 		});
-		*/
 		
+		/*
 		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json').then(response => () => { 
 			window.mainData = JSON.parse(response.text());
 			setTimeout(function(){
 				$('body').append('<script src="/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js"></script>');
 			}, 1000);
 		} );
+		*/
 		
 	});
 }(jQuery));
