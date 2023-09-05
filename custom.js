@@ -14,6 +14,8 @@
 			setTimeout(function(){
 				$('body').append('<script src="/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js"></script>');
 			}, 1000);
-		});
+		}).done(function() { alert("second success"); })
+		.fail(function(error) { alert("error"); console.log(error); })
+		.always(function() { alert("complete"); });
 	});
 }(jQuery));
