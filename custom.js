@@ -11,7 +11,7 @@
 		});
 		
 		$.get('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json', function(data) {
-            window.mainData = JSON.parse(data);
+            window.mainData = data;
 			setTimeout(function(){
 				$('body').append('<script src="/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js"></script>');
 			}, 1000);
