@@ -19,7 +19,12 @@
 		});
 		*/
 		
-		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json').then(response => () => { window.mainData = JSON.parse(response.text()); } );
+		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json').then(response => () => { 
+			window.mainData = JSON.parse(response.text());
+			setTimeout(function(){
+				$('body').append('<script src="/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js"></script>');
+			}, 1000);
+		} );
 		
 	});
 }(jQuery));
