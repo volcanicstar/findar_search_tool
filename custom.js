@@ -17,6 +17,7 @@
 			}, 1000);
 		});
 		*/
-		window.mainData = require('./data/data.json');
+		//window.mainData = require('./data/data.json');
+		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json').then(response => window.mainData = response.json());
 	});
 }(jQuery));
