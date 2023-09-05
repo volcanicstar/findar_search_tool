@@ -9,15 +9,12 @@
 		$.getJSON('/wp-content/themes/area-theme-live/assets/vue/js/data/category.json', function(data) {
             window.categoryData = data;
 		});
-		/*
+		
 		$.get('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json', function(data) {
-            window.mainData = require('./data/data.json');
+            window.mainData = JSON.parse(data);
 			setTimeout(function(){
 				$('body').append('<script src="/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js"></script>');
 			}, 1000);
 		});
-		*/
-		//window.mainData = require('./data/data.json');
-		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json').then(response => window.mainData = response.json());
 	});
 }(jQuery));
