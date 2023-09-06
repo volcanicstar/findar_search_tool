@@ -9,5 +9,5 @@ window.categoryData = category;
 window.mainData = data;
 
 const script = document.createElement("script");
-script.src = "./area-research.app.js";
+script.src = "/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js";
 document.body.appendChild(script);
