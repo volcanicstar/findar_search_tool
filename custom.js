@@ -28,13 +28,11 @@
 		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/category.json').then(response => () => {
 			window.category = response.json();
 		});
-		
-		
 		fetch('/wp-content/themes/area-theme-live/assets/vue/js/data/data.json').then(response => () => {
 			window.mainData = response.json();
 			setTimeout(function(){
 				$('body').append('<script src="/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js"></script>');
-			}, 100);
+			}, 1000);
 		});
 		
 		
