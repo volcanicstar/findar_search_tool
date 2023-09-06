@@ -5,5 +5,9 @@ import data from "./data/data.json" assert {type: 'json'};
 
 window.topicsData = topics;
 window.termsData = terms;
-window.category = category;
+window.categoryData = category;
 window.mainData = data;
+
+const script = document.createElement("script");
+script.src = "./area-research.app.js";
+document.body.appendChild(script);
