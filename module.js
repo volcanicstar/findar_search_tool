@@ -9,5 +9,5 @@ window.categoryData = category;
 window.mainData = data;
 
 const script = document.createElement("script");
-script.src = "/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js";
+script.src = "/wp-content/themes/area-theme-live/assets/vue/js/area-research.app.js?rnd="+Math.random(0,1000);
 document.body.appendChild(script);
