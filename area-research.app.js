@@ -4,7 +4,7 @@ var that = this;
 window.vueSelectHandler = function(e){ var itm = null; window.vueStoreTerms.forEach(function(item,key){ if(key==e){ itm = item;} }); that.selectHandler({item:itm});};
 var listItems = '<div id="termsItemListContainer"><ul class="termsItemList">';
 window.vueStoreTerms.forEach(function(item,key){
-listItems+='<li data-id="'+key+'"><a href="#" onclick="vueSelectHandler('+key+')">'+item.label+'</a></li>';
+listItems+='<li data-id="'+key+'"><button onclick="vueSelectHandler('+key+')">'+item.label+'</button></li>';
 });
 listItems += '</ul><div>';
 setTimeout(function(){
