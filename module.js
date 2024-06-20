@@ -1,7 +1,7 @@
-import topics from "./data/topics.json" assert {type: 'json'};
-import terms from "./data/terms.json" assert {type: 'json'};
-import category from "./data/category.json" assert {type: 'json'};
-import data from "./data/data.json" assert {type: 'json'};
+import topics from "./data/topics.json" with {type: 'json'};
+import terms from "./data/terms.json" with {type: 'json'};
+import category from "./data/category.json" with {type: 'json'};
+import data from "./data/data.json" with {type: 'json'};
 
 window.topicsData = topics;
 window.termsData = terms;
